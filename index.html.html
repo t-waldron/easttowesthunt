@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>East to West Hunting Podcast | Hosted by Todd Waldron</title>
+  <meta name="description" content="East to West Hunting Podcast — real stories from everyday hunters, anglers, and conservationists. Hosted by Todd Waldron. Listen on Apple Podcasts and Libsyn. 2018–2021." />
+  <meta name="keywords" content="hunting podcast, east to west hunting, Todd Waldron, conservation podcast, outdoor podcast, hunting community, public lands, whitetail hunting, elk hunting, everyday hunters, New York hunting" />
+  <meta name="author" content="Todd Waldron" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://easttowesthunt.com/" />
+
+  <!-- Open Graph (Facebook, LinkedIn, iMessage previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="East to West Hunting Podcast" />
+  <meta property="og:description" content="Real stories from everyday hunters, anglers, and conservationists — coast to coast. Hosted by Todd Waldron. 2018–2021." />
+  <meta property="og:image" content="EasttoWestHunting_Logo.png" />
+  <meta property="og:url" content="https://easttowesthunt.com/" />
+  <meta property="og:site_name" content="East to West Hunting Podcast" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="East to West Hunting Podcast" />
+  <meta name="twitter:description" content="Real stories from everyday hunters, anglers, and conservationists — coast to coast. Hosted by Todd Waldron." />
+  <meta name="twitter:image" content="EasttoWestHunting_Logo.png" />
+
+  <!-- Podcast structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "East to West Hunting Podcast",
+    "description": "A podcast promoting community in outdoor spaces, raising awareness for conservation issues, and amplifying the voices of everyday hunters and anglers.",
+    "author": { "@type": "Person", "name": "Todd Waldron" },
+    "url": "https://easttowesthunt.com/",
+    "image": "EasttoWestHunting_Logo.png",
+    "startDate": "2018",
+    "endDate": "2021",
+    "genre": ["Hunting", "Outdoors", "Conservation", "Nature"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest:  #1A2718;
+      --canopy:  #253D21;
+      --fern:    #4A6E35;
+      --sage:    #7A9E5C;
+      --mist:    #B8CCAA;
+      --cream:   #F2ECD8;
+      --straw:   #D9C99A;
+      --orange:  #C4571A;
+      --gold:    #C4922A;
+      --text-mid:#3D5230;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--cream);
+      color: var(--forest);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 60px;
+      background: rgba(26,39,24,0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(122,158,92,0.2);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+    .nav-logo img {
+      height: 36px;
+      width: 36px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('IMG_20171111_155447733.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      animation: slowzoom 22s ease-in-out infinite alternate;
+    }
+    @keyframes slowzoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.10); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(26,39,24,0.50) 0%,
+        rgba(26,39,24,0.72) 55%,
+        rgba(26,39,24,0.94) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      padding: 120px 24px 80px;
+      max-width: 840px;
+    }
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 18px;
+      animation: fadeup 0.8s ease both;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(56px, 9vw, 100px);
+      font-weight: 900;
+      line-height: 0.92;
+      color: var(--cream);
+      letter-spacing: -2px;
+      margin-bottom: 8px;
+      animation: fadeup 0.9s 0.1s ease both;
+    }
+    .hero-title em {
+      color: var(--orange);
+      font-style: italic;
+    }
+    .hero-subtitle {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 36px;
+      animation: fadeup 0.9s 0.2s ease both;
+    }
+    .hero-tagline {
+      font-size: 19px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.75;
+      color: var(--cream);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      opacity: 0.9;
+      animation: fadeup 0.9s 0.3s ease both;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(122,158,92,0.15);
+      border: 1px solid rgba(122,158,92,0.35);
+      border-radius: 40px;
+      padding: 10px 28px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mist);
+      animation: fadeup 0.9s 0.4s ease both;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeup 1s 0.8s ease both;
+    }
+    .hero-scroll span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+    .scroll-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, var(--sage), transparent);
+      animation: scrollpulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollpulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes fadeup {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ABOUT */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 100px 72px;
+      background: var(--cream);
+    }
+    .about-img-wrap { position: relative; }
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 3px;
+      display: block;
+    }
+    .about-img-frame {
+      position: absolute;
+      top: -14px; left: -14px; right: 14px; bottom: 14px;
+      border: 1px solid var(--fern);
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+    .about-year-badge {
+      position: absolute;
+      bottom: 28px;
+      right: -18px;
+      background: var(--forest);
+      color: var(--sage);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border-radius: 2px;
+    }
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--fern);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--forest);
+      margin-bottom: 24px;
+    }
+    .section-body {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-mid);
+      max-width: 540px;
+    }
+    .section-body + .section-body { margin-top: 16px; }
+
+    /* PILLARS */
+    #pillars {
+      background: var(--forest);
+      padding: 80px 72px;
+    }
+    #pillars .section-title { color: var(--cream); }
+    #pillars .section-label { color: var(--sage); }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+    .pillar-card {
+      background: var(--canopy);
+      padding: 44px 32px;
+      border: 1px solid rgba(122,158,92,0.12);
+      transition: background 0.3s;
+    }
+    .pillar-card:hover { background: rgba(74,110,53,0.35); }
+    .pillar-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+    .pillar-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 14px;
+    }
+    .pillar-card p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--mist);
+    }
+
+    /* TOPICS */
+    #episodes {
+      background: var(--cream);
+      padding: 80px 72px;
+    }
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      margin-top: 48px;
+      border: 1px solid rgba(74,110,53,0.15);
+    }
+    .topic-card {
+      padding: 40px 36px;
+      background: #fff;
+      border: 1px solid rgba(74,110,53,0.1);
+      transition: background 0.2s;
+    }
+    .topic-card:hover { background: #f7f2e5; }
+    .topic-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--sage);
+      margin-bottom: 12px;
+    }
+    .topic-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+    .topic-card p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-mid);
+    }
+
+    /* QUOTE */
+    .quote-banner {
+      background: var(--orange);
+      padding: 72px 80px;
+      text-align: center;
+    }
+    .quote-banner blockquote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(22px, 3.5vw, 38px);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.4;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .quote-banner cite {
+      display: block;
+      margin-top: 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(242,236,216,0.65);
+      font-style: normal;
+    }
+
+    /* HOST */
+    #host {
+      background: #EDE7D2;
+      padding: 80px 72px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .host-img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 3px solid var(--fern);
+      display: block;
+    }
+    .host-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+    .host-role {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--fern);
+      margin-bottom: 28px;
+    }
+    .host-bio {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-mid);
+    }
+
+    /* LISTEN */
+    #listen {
+      background: var(--forest);
+      text-align: center;
+      padding: 100px 48px;
+    }
+    #listen .section-label { color: var(--sage); }
+    #listen .section-title { color: var(--cream); margin-bottom: 14px; }
+    .listen-sub {
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mist);
+      margin-bottom: 56px;
+    }
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 17px 38px;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.22s;
+      cursor: pointer;
+    }
+    .btn-apple {
+      background: var(--cream);
+      color: var(--forest);
+      border: 2px solid var(--cream);
+    }
+    .btn-apple:hover { background: transparent; color: var(--cream); }
+    .btn-libsyn {
+      background: transparent;
+      color: var(--sage);
+      border: 2px solid var(--fern);
+    }
+    .btn-libsyn:hover { background: var(--canopy); border-color: var(--sage); color: var(--cream); }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .listen-logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 16px;
+      margin: 0 auto 40px;
+      display: block;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111C10;
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(122,158,92,0.12);
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--fern);
+    }
+    .footer-copy {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: rgba(184,204,170,0.35);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 16px; }
+      #about { grid-template-columns: 1fr; gap: 40px; padding: 60px 28px; }
+      .about-year-badge { right: 0; }
+      #pillars { padding: 60px 28px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      #episodes { padding: 60px 28px; }
+      .topics-grid { grid-template-columns: 1fr; }
+      #host { grid-template-columns: 1fr; gap: 32px; padding: 60px 28px; }
+      .host-img { width: 160px; height: 160px; }
+      .quote-banner { padding: 48px 28px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="EasttoWestHunting_Logo.png" alt="East to West Hunting Podcast logo" />
+      East to West
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#pillars">Mission</a></li>
+      <li><a href="#episodes">Topics</a></li>
+      <li><a href="#host">Host</a></li>
+      <li><a href="#listen">Listen</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">A hunting &amp; outdoors podcast</p>
+      <h1 class="hero-title">East to <em>West</em></h1>
+      <p class="hero-subtitle">Hunting Podcast</p>
+      <p class="hero-tagline">
+        Real stories from everyday hunters, anglers, and conservationists — coast to coast.
+      </p>
+      <div class="hero-badge">Hosted by Todd Waldron &nbsp;·&nbsp; 2018–2021</div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-img-wrap">
+      <img
+        src="IMG_20171114_092958_876.jpg"
+        alt="Todd Waldron standing in tall prairie grass at golden hour"
+        class="about-img"
+      />
+      <div class="about-img-frame"></div>
+      <div class="about-year-badge">Est. 2018</div>
+    </div>
+    <div>
+      <p class="section-label">About the podcast</p>
+      <h2 class="section-title">Built for the everyday outdoorsperson</h2>
+      <p class="section-body">
+        East to West Hunting Podcast was born from a simple belief: the most important
+        voices in the outdoor community aren't the celebrities or the sponsors — they're
+        the regular people out there doing the work. Hunters, anglers, land stewards,
+        and conservationists living it day to day.
+      </p>
+      <p class="section-body">
+        From 2018 to 2021, host Todd Waldron traveled — in spirit and story — from the
+        eastern hardwoods to the wide-open western prairies, connecting a community
+        that shares more common ground than it often realizes.
+      </p>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="pillars">
+    <p class="section-label">What we stand for</p>
+    <h2 class="section-title">The three pillars</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-icon">🤝</span>
+        <h3>Community</h3>
+        <p>
+          Outdoor spaces are shared spaces. East to West worked to bridge regional
+          divides and remind listeners that hunters and anglers across the country
+          are stronger together than apart.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🌿</span>
+        <h3>Conservation</h3>
+        <p>
+          Public lands, clean water, and healthy wildlife populations don't protect
+          themselves. The podcast gave voice to the conservation issues that matter
+          most to everyday outdoor people.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🎙️</span>
+        <h3>Everyday voices</h3>
+        <p>
+          Not influencers. Not industry figures. Real people with real stories — the
+          kind that remind you why you got into the outdoors in the first place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section id="episodes">
+    <p class="section-label">What you'll hear</p>
+    <h2 class="section-title">Topics from the field<br>and beyond</h2>
+    <div class="topics-grid">
+      <div class="topic-card">
+        <p class="topic-num">01</p>
+        <h3>Hunt stories &amp; tactics</h3>
+        <p>
+          From whitetail runs in the East to elk country out West — honest accounts
+          of successes, failures, and everything the woods taught along the way.
+        </p>
+      </div>
+      <div class="topic-card">
+        <p class="topic-num">02</p>
+        <h3>Conservation &amp; public lands</h3>
+        <p>
+          Habitat loss, water rights, access issues, and the policies shaping the
+          future of wild places — discussed in plain language by people who care.
+        </p>
+      </div>
+      <div class="topic-card">
+        <p class="topic-num">03</p>
+        <h3>Culture &amp; identity</h3>
+        <p>
+          What does hunting mean to a family? A community? A region? Episodes that
+          explore the deeper roots of outdoor tradition and why it matters.
+        </p>
+      </div>
+      <div class="topic-card">
+        <p class="topic-num">04</p>
+        <h3>Guest interviews</h3>
+        <p>
+          Conversations with wildlife biologists, land managers, conservation
+          advocates, and fellow hunters sharing what they've learned in the field.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BANNER -->
+  <div class="quote-banner">
+    <blockquote>
+      "No celebrities, no filters — just the people living it."
+    </blockquote>
+    <cite>— The spirit of East to West</cite>
+  </div>
+
+  <!-- HOST -->
+  <section id="host">
+    <img
+      src="IMG_20171111_194734_265.jpg"
+      alt="Todd Waldron, host of East to West Hunting Podcast"
+      class="host-img"
+    />
+    <div>
+      <p class="section-label">Your host</p>
+      <h2 class="host-name">Todd Waldron</h2>
+      <p class="host-role">Host &amp; Creator · 2018–2021</p>
+      <p class="host-bio">
+        <!-- EDIT THIS PARAGRAPH WITH YOUR OWN WORDS -->
+        I'm a hunter, conservationist, and outdoor enthusiast based in New York.
+        I started East to West because I believed the outdoor community needed a space
+        where regular people could be heard — not just the brands and the professionals.
+        Over three seasons, I had the privilege of talking with dozens of hunters, anglers,
+        and advocates who reminded me every week why these wild spaces are worth protecting.
+        This podcast was their voice as much as mine.
+      </p>
+    </div>
+  </section>
+
+  <!-- LISTEN -->
+  <section id="listen">
+    <p class="section-label">All episodes free to stream</p>
+    <h2 class="section-title">Listen to East to West</h2>
+    <img
+      src="EasttoWestHunting_Logo.png"
+      alt="East to West Hunting Podcast official cover art"
+      class="listen-logo"
+    />
+    <p class="listen-sub">Every episode archived and available — pick your platform below.</p>
+    <div class="btn-row">
+      <a
+        href="https://podcasts.apple.com/us/podcast/east-to-west-hunting-podcast/id1364242900"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-apple"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Apple Podcasts
+      </a>
+      <a
+        href="http://eastwesthunt.libsyn.com/website"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-libsyn"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="10 8 16 12 10 16 10 8"/>
+        </svg>
+        Libsyn Archive
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">East to West Hunting Podcast</div>
+    <div class="footer-copy">© 2018–2021 Todd Waldron · All rights reserved</div>
+  </footer>
+
+</body>
+</html>
