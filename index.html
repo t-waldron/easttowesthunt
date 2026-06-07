@@ -113,7 +113,203 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--sage); }
+    .nav-links a.nav-cta {
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      padding: 4px 12px;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a.nav-cta:hover { background: var(--orange); color: var(--cream); }
+
+    /* SIGNUP SECTION */
+    #signup {
+      background: var(--canopy);
+      padding: 80px 48px;
+      text-align: center;
+    }
+    #signup .section-label { color: var(--sage); }
+    #signup .section-title { color: var(--cream); margin-bottom: 14px; }
+    .signup-sub {
+      font-size: 17px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mist);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.75;
+    }
+    .signup-guide-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .signup-guide-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    }
+    .signup-guide-text {
+      text-align: left;
+      max-width: 340px;
+    }
+    .signup-guide-text h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .signup-guide-text ul {
+      list-style: none;
+      padding: 0;
+    }
+    .signup-guide-text ul li {
+      font-size: 14px;
+      color: var(--mist);
+      font-weight: 300;
+      line-height: 1.7;
+      padding-left: 16px;
+      position: relative;
+    }
+    .signup-guide-text ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--sage);
+      font-size: 12px;
+    }
+    .signup-form {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 520px;
+      margin: 0 auto 16px;
+    }
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      border: 1px solid rgba(122,158,92,0.4);
+      border-radius: 3px;
+      background: rgba(255,255,255,0.08);
+      color: var(--cream);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .signup-form input[type="email"]::placeholder { color: var(--mist); opacity: 0.6; }
+    .signup-form input[type="email"]:focus { border-color: var(--sage); }
+    .signup-form button {
+      padding: 14px 28px;
+      background: var(--orange);
+      color: var(--cream);
+      border: none;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .signup-form button:hover { background: #a8491500; background: #a84915; }
+    .signup-disclaimer {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: rgba(184,204,170,0.45);
+    }
+
+    /* BLOG SECTION */
+    #blog {
+      background: var(--cream);
+      padding: 80px 72px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .blog-card {
+      background: #fff;
+      border: 1px solid rgba(74,110,53,0.12);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 8px 32px rgba(26,39,24,0.1);
+      transform: translateY(-3px);
+    }
+    .blog-card-tag {
+      background: var(--forest);
+      padding: 20px 24px 16px;
+    }
+    .blog-card-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 8px;
+    }
+    .blog-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.35;
+    }
+    .blog-card-body {
+      padding: 20px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-excerpt {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-mid);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .blog-card-read {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .blog-card-read:hover { gap: 10px; }
+
+    /* RESPONSIVE additions */
+    @media (max-width: 900px) {
+      #signup { padding: 60px 28px; }
+      .signup-guide-preview { flex-direction: column; text-align: center; }
+      .signup-guide-text { text-align: center; }
+      .signup-guide-text ul li { text-align: left; }
+      #blog { padding: 60px 28px; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
 
     /* HERO */
     .hero {
@@ -569,6 +765,8 @@
       <li><a href="#episodes">Topics</a></li>
       <li><a href="#host">Host</a></li>
       <li><a href="#listen">Listen</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#signup" class="nav-cta">Free Guide</a></li>
     </ul>
   </nav>
 
@@ -761,11 +959,115 @@
     </div>
   </section>
 
+  <!-- EMAIL SIGNUP -->
+  <section id="signup">
+    <p class="section-label">Free download</p>
+    <h2 class="section-title">Get the Free Guide</h2>
+    <p class="signup-sub">
+      Five episodes. The most important lessons from each. Free — in exchange for your email.
+    </p>
+    <div class="signup-guide-preview">
+      <img src="EasttoWestHunting_Logo.png" alt="East to West free guide" class="signup-guide-img" />
+      <div class="signup-guide-text">
+        <h3>5 Episodes That Will Change How You Think About Hunting</h3>
+        <ul>
+          <li>Key takeaways from the most impactful archive episodes</li>
+          <li>Topics: community, public land, identity, biology &amp; tradition</li>
+          <li>Direct links to stream every episode</li>
+          <li>Free — no spam, unsubscribe anytime</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAILCHIMP FORM — replace action URL with your Mailchimp embed URL -->
+    <!-- Step 1: Sign up at mailchimp.com (free)                           -->
+    <!-- Step 2: Audience → Signup forms → Embedded forms → copy action URL -->
+    <!-- Step 3: Replace the action="#" below with your Mailchimp action URL -->
+    <form
+      action="#"
+      method="post"
+      class="signup-form"
+      target="_blank"
+      onsubmit="handleSignup(event)"
+    >
+      <input
+        type="email"
+        name="EMAIL"
+        placeholder="Your email address"
+        required
+        aria-label="Email address"
+      />
+      <button type="submit">Send Me the Guide</button>
+    </form>
+    <p class="signup-disclaimer">No spam. No selling your info. Unsubscribe anytime.</p>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <p class="section-label">From the archive</p>
+    <h2 class="section-title">Field Notes</h2>
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-card-tag">
+          <p class="blog-card-label">Conservation</p>
+          <h3 class="blog-card-title">Why Public Land Hunters Are the Most Important Conservationists You've Never Heard Of</h3>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-excerpt">
+            Public land hunters have more skin in the conservation game than any other outdoor user group. When habitat degrades, the hunting degrades. When access is restricted, the opportunity disappears. Here's why that feedback loop matters — and what it means for the future of wild places.
+          </p>
+          <a href="#listen" class="blog-card-read">Listen to related episodes →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-tag">
+          <p class="blog-card-label">Community</p>
+          <h3 class="blog-card-title">The Mentorship Crisis Nobody in Hunting Is Talking About</h3>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-excerpt">
+            The informal mentorship pipeline that sustained hunting culture for generations has broken down. More content, more gear, and more media won't fix it. Here's what actually will — and why experienced hunters bear more responsibility than they realize.
+          </p>
+          <a href="#listen" class="blog-card-read">Listen to related episodes →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-tag">
+          <p class="blog-card-label">Archive Picks</p>
+          <h3 class="blog-card-title">5 Hunting Podcast Episodes Worth Listening to More Than Once</h3>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-excerpt">
+            Most podcast content dates quickly. These five episodes from the East to West archive are different — they're about things that don't change. The values behind hunting, the relationships that sustain it, and the land that makes it possible.
+          </p>
+          <a href="#listen" class="blog-card-read">Listen to the archive →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">East to West Hunting Podcast</div>
     <div class="footer-copy">© 2018–2021 Todd Waldron · All rights reserved</div>
   </footer>
 
+  <script>
+    function handleSignup(e) {
+      // Once you add your Mailchimp action URL above, remove this function
+      // and let the form submit normally. This is just a placeholder.
+      const form = e.target;
+      if (form.action === '#' || form.action === window.location.href) {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        btn.textContent = 'Check your Mailchimp setup!';
+        btn.style.background = '#4A6E35';
+      }
+    }
+  </script>
 </body>
 </html>
