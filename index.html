@@ -230,7 +230,34 @@
       color: rgba(184,204,170,0.45);
     }
 
-    /* BLOG SECTION */
+    /* MailerLite embed overrides */
+    .ml-embedded {
+      max-width: 520px;
+      margin: 0 auto 16px;
+    }
+    .ml-embedded .ml-form-embedWrapper {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    .ml-embedded input[type="email"] {
+      background: rgba(255,255,255,0.08) !important;
+      border: 1px solid rgba(122,158,92,0.4) !important;
+      color: var(--cream) !important;
+      border-radius: 3px !important;
+      font-family: 'Source Serif 4', Georgia, serif !important;
+    }
+    .ml-embedded .ml-form-embedSubmit button {
+      background: var(--orange) !important;
+      border-radius: 3px !important;
+      font-family: 'Barlow Condensed', sans-serif !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      font-weight: 700 !important;
+    }
+    .ml-embedded .ml-form-embedSubmit button:hover {
+      background: #a84915 !important;
+    }
     #blog {
       background: var(--cream);
       padding: 80px 72px;
@@ -750,6 +777,15 @@
       footer { flex-direction: column; gap: 12px; text-align: center; }
     }
   </style>
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2415066');
+  </script>
+  <!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -979,25 +1015,7 @@
       </div>
     </div>
 
-    <form
-      action="https://easttowesthunt.us6.list-manage.com/subscribe/post?u=7f386790c093249be28862550&amp;id=7ebc70e960&amp;f_id=0092fbe0f0"
-      method="post"
-      class="signup-form"
-      target="_blank"
-    >
-      <input
-        type="email"
-        name="EMAIL"
-        placeholder="Your email address"
-        required
-        aria-label="Email address"
-      />
-      <!-- Mailchimp bot protection — do not remove -->
-      <div aria-hidden="true" style="position:absolute;left:-5000px;">
-        <input type="text" name="b_7f386790c093249be28862550_7ebc70e960" tabindex="-1" value="">
-      </div>
-      <button type="submit">Send Me the Guide</button>
-    </form>
+    <div class="ml-embedded" data-form="t0k6To"></div>
     <p class="signup-disclaimer">No spam. No selling your info. Unsubscribe anytime.</p>
   </section>
 
