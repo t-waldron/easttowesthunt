@@ -979,16 +979,11 @@
       </div>
     </div>
 
-    <!-- MAILCHIMP FORM — replace action URL with your Mailchimp embed URL -->
-    <!-- Step 1: Sign up at mailchimp.com (free)                           -->
-    <!-- Step 2: Audience → Signup forms → Embedded forms → copy action URL -->
-    <!-- Step 3: Replace the action="#" below with your Mailchimp action URL -->
     <form
-      action="#"
+      action="https://easttowesthunt.us6.list-manage.com/subscribe/post?u=7f386790c093249be28862550&amp;id=7ebc70e960&amp;f_id=0092fbe0f0"
       method="post"
       class="signup-form"
       target="_blank"
-      onsubmit="handleSignup(event)"
     >
       <input
         type="email"
@@ -997,6 +992,10 @@
         required
         aria-label="Email address"
       />
+      <!-- Mailchimp bot protection — do not remove -->
+      <div aria-hidden="true" style="position:absolute;left:-5000px;">
+        <input type="text" name="b_7f386790c093249be28862550_7ebc70e960" tabindex="-1" value="">
+      </div>
       <button type="submit">Send Me the Guide</button>
     </form>
     <p class="signup-disclaimer">No spam. No selling your info. Unsubscribe anytime.</p>
@@ -1056,18 +1055,5 @@
     <div class="footer-copy">© 2018–2021 Todd Waldron · All rights reserved</div>
   </footer>
 
-  <script>
-    function handleSignup(e) {
-      // Once you add your Mailchimp action URL above, remove this function
-      // and let the form submit normally. This is just a placeholder.
-      const form = e.target;
-      if (form.action === '#' || form.action === window.location.href) {
-        e.preventDefault();
-        const btn = form.querySelector('button');
-        btn.textContent = 'Check your Mailchimp setup!';
-        btn.style.background = '#4A6E35';
-      }
-    }
-  </script>
 </body>
 </html>
